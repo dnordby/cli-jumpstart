@@ -1,7 +1,11 @@
 {
-  "name": "cli-jumpstart",
+  "name": "@dnordby/cli-jumpstart",
   "version": "1.0.0",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  }
   "main": "index.ts",
+  "license": "MIT",
   "type": "module",
   "files": ["dist"],
   "scripts": {
@@ -12,8 +16,7 @@
     "jumpstart": "./dist/index.js"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Daniel Nordby",
   "description": "",
   "dependencies": {
     "chalk": "^5.4.1",
