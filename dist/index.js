@@ -7,7 +7,7 @@ import { execSync } from "child_process";
 program
     .name("jumpstart")
     .description("Initialize a jumpstart watcher for a Shopify theme")
-    .version("1.0.0");
+    .version("1.0.2");
 program
     .description("Initialize jumpstart directory")
     .argument("[directory]", "The directory name to initialize")
