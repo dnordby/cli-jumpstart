@@ -4,7 +4,7 @@ A lightweight CLI tool intended to keep premium versioned themes in sync with up
 It is primarily intended to be used with **existing** stores, but future enhancements are in the roadmap to consider starting brand new builds using this as a starter.
 
 ## Installation
-To install run `npm i -g @dnordby/cli-shopsync@1.0.0` in the directory you would like to start a new project in.
+To install run: `npm i -g @dnordby/cli-shopsync`
 
 
 ## Usage
