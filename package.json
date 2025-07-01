@@ -1,14 +1,14 @@
 {
-  "name": "@dnordby/cli-jumpstart",
+  "name": "@shopsync/cli",
   "version": "1.0.0",
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
+    "access": "public"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dnordby/cli-jumpstart.git"
+    "url": "git+https://github.com/dnordby/cli-shopsync.git"
   },
-  "main": "index.ts",
+  "main": "dist/index.js",
   "license": "MIT",
   "type": "module",
   "files": [
@@ -23,11 +23,11 @@
     "major": "npm version major"
   },
   "bin": {
-    "jumpstart": "dist/index.js"
+    "shopsync": "dist/index.js"
   },
   "keywords": [],
   "author": "Daniel Nordby",
-  "description": "",
+  "description": "A lightweight CLI to help sync your Shopify customizations with the latest theme updates from Shopify, or other premium themes.",
   "dependencies": {
     "chalk": "^5.4.1",
     "commander": "^14.0.0"

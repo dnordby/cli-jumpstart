@@ -5,29 +5,29 @@ import fs from "fs";
 import path from "path";
 import { execSync } from "child_process";
 program
-    .name("jumpstart")
-    .description("Initialize a jumpstart watcher for a Shopify theme")
-    .version("1.0.2");
+    .name("shopsync")
+    .description("Initialize a shopsync watcher for a Shopify theme")
+    .version("1.0.0");
 program
-    .description("Initialize jumpstart directory")
+    .description("Initialize shopsync directory")
     .argument("[directory]", "The directory name to initialize")
     .action((directory) => {
-    console.log(chalk.bgGreenBright("Initializing jumpstart directory..."));
+    console.log(chalk.bgGreenBright("Initializing shopsync directory..."));
     console.log(chalk.white(" "));
-    const jumpstartUrl = `https://github.com/dnordby/jumpstart.git`;
+    const shopsyncUrl = `https://github.com/dnordby/shopsync.git`;
     const fullPath = path.resolve(process.cwd(), directory);
     if (fs.existsSync(fullPath)) {
         console.log(chalk.bgRedBright(`Directory ${directory} already exists`));
         return;
     }
     try {
-        execSync(`git clone ${jumpstartUrl}`, { stdio: "inherit" });
-        execSync(`mv jumpstart ${directory}`, { stdio: "inherit" });
+        execSync(`git clone ${shopsyncUrl}`, { stdio: "inherit" });
+        execSync(`mv shopsync ${directory}`, { stdio: "inherit" });
         execSync(`cd ${directory} && npm install`, { stdio: "inherit" });
         execSync(`cd ${directory} && touch .env`, { stdio: "inherit" });
     }
     catch (error) {
-        console.log(chalk.bgRedBright(`Error initializing jumpstart for ${directory}`));
+        console.log(chalk.bgRedBright(`Error initializing shopsync for ${directory}`));
         return;
     }
     console.log(chalk.white(" "));
@@ -35,7 +35,7 @@ program
     console.log(chalk.white(" "));
     console.log(chalk.whiteBright(`💡 Run this to connect to your store:`));
     console.log(chalk.white.bgBlack(`$ cd ${directory}`));
-    console.log(chalk.white.bgBlack(`$ jumpstart connect [store] [themeId]`));
+    console.log(chalk.white.bgBlack(`$ shopsync connect [store] [themeId]`));
     console.log(chalk.white(" "));
 });
 program
