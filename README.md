@@ -9,7 +9,7 @@ It is primarily intended to be used with **existing** stores, but future enhance
  - [Shopify CLI](https://shopify.dev/docs/api/shopify-cli)
 
 ## Installation
-To install run: `npm i -g @shopsync/cli`
+`npm i -g @shopsync/cli`
 
 
 ## Usage
@@ -17,8 +17,6 @@ To install run: `npm i -g @shopsync/cli`
 ### Usage help:
 
 `shopsync -h`
-
----
 
 ### Getting Started:
 In the directory you want to start a new project, or pull in an existing store:
@@ -33,3 +31,8 @@ In the directory you want to start a new project, or pull in an existing store:
   - `themeId` accepts a string: the theme ID as found in Shopify
 
 Once complete, the CLI will connect to the store and theme specified, pull in the latest code from that instance, and output success messages. If there is an error, these will be displayed instead.
+
+---
+
+## Troubleshooting
+If `shopsync connect [store] [themeId]` appears to hang, please ensure you are authenticated to Shopify in your terminal. To validate, you can try a command like `shopify theme pull`. If an error is thrown, you are not authenticated and the CLI will not surface commands to log in to Shopify. Please login before continuing.
