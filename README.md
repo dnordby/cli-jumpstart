@@ -9,7 +9,7 @@ It is primarily intended to be used with **existing** stores, but future enhance
  - [Shopify CLI](https://shopify.dev/docs/api/shopify-cli)
 
 ## Installation
-To install run: `npm i -g @dnordby/cli-shopsync`
+To install run: `npm i -g @shopsync/cli`
 
 
 ## Usage
