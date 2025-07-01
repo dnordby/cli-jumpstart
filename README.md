@@ -3,6 +3,11 @@ A lightweight CLI tool intended to keep premium versioned themes in sync with up
 
 It is primarily intended to be used with **existing** stores, but future enhancements are in the roadmap to consider starting brand new builds using this as a starter.
 
+## Dependencies
+ - `node` >= `v20.19.0`
+ - `npm` >= `v10.8.2`
+ - [Shopify CLI](https://shopify.dev/docs/api/shopify-cli)
+
 ## Installation
 To install run: `npm i -g @dnordby/cli-shopsync`
 
