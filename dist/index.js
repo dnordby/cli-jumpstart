@@ -15,7 +15,7 @@ program
     .version("1.0.0")
     .description("Sync custom changes to local Shopify theme")
     .action(() => {
-    const configPath = path.resolve(process.cwd(), "./.shopsync.config.json");
+    const configPath = path.resolve(process.cwd(), "./shopsync.json");
     if (!fs.existsSync(configPath)) {
         console.log(chalk.bgRedBright("It looks like you are not in a shopsync directory. Please `cd` to a directory that contains a shopsync project."));
         return;
@@ -68,7 +68,7 @@ program
     try {
         fs.writeFileSync(".env", `${storeConfig}\n${themeConfig}`);
         execSync(`cd theme && shopify theme pull --theme ${themeId} --store ${store} --force`);
-        fs.writeFileSync(".shopsync.config.json", JSON.stringify({
+        fs.writeFileSync("shopsync.json", JSON.stringify({
             cliVersion: `${version}`,
             themeId: themeId,
             store: store,
