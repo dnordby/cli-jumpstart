@@ -15,7 +15,7 @@ const version = packageJson.version;
 
 program
   .name("shopsync")
-  .version("1.0.0")
+  .version("1.1.3")
   .description("Sync custom changes to local Shopify theme")
   .action(() => {
     const configPath = path.resolve(process.cwd(), "./shopsync.json");
