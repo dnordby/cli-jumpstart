@@ -18,7 +18,7 @@ program
   .version("1.0.0")
   .description("Sync custom changes to local Shopify theme")
   .action(() => {
-    const configPath = path.resolve(process.cwd(), "./.shopsync.config.json");
+    const configPath = path.resolve(process.cwd(), "./shopsync.json");
 
     if (!fs.existsSync(configPath)) {
       console.log(
@@ -87,7 +87,7 @@ program
       );
 
       fs.writeFileSync(
-        ".shopsync.config.json",
+        "shopsync.json",
         JSON.stringify({
           cliVersion: `${version}`,
           themeId: themeId,
