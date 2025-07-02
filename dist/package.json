@@ -1,40 +1,40 @@
 {
-    "name": "@shopsync/cli",
-    "version": "1.0.1",
-    "publishConfig": {
-        "access": "public"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/dnordby/cli-shopsync.git"
-    },
-    "main": "dist/index.js",
-    "license": "MIT",
-    "type": "module",
-    "files": [
-        "dist"
-    ],
-    "scripts": {
-        "build": "tsc",
-        "start": "node dist/index.js",
-        "deploy": "npm publish",
-        "bump": "npm version patch",
-        "minor": "npm version minor",
-        "major": "npm version major"
-    },
-    "bin": {
-        "shopsync": "dist/index.js"
-    },
-    "keywords": [],
-    "author": "Daniel Nordby",
-    "description": "A lightweight CLI to help sync your Shopify customizations with the latest theme updates from Shopify, or other premium themes.",
-    "dependencies": {
-        "chalk": "^5.4.1",
-        "commander": "^14.0.0"
-    },
-    "devDependencies": {
-        "@types/node": "^24.0.1",
-        "ts-node": "^10.9.2",
-        "typescript": "^5.8.3"
-    }
+  "name": "@shopsync/cli",
+  "version": "1.1.2",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dnordby/cli-shopsync.git"
+  },
+  "main": "dist/index.js",
+  "license": "MIT",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "deploy": "npm publish",
+    "bump": "npm version patch",
+    "minor": "npm version minor",
+    "major": "npm version major"
+  },
+  "bin": {
+    "shopsync": "dist/index.js"
+  },
+  "keywords": [],
+  "author": "Daniel Nordby",
+  "description": "A lightweight CLI to help sync your Shopify customizations with the latest theme updates from Shopify, or other premium themes.",
+  "dependencies": {
+    "chalk": "^5.4.1",
+    "commander": "^14.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  }
 }
