@@ -5,7 +5,8 @@ import { program } from "commander";
 import fs from "fs";
 import path from "path";
 import { execSync } from "child_process";
-import { version } from "./package.json";
+const packageJson = JSON.parse(fs.readFileSync('./package.json', 'utf-8'));
+const version = packageJson.version;
 
 program
   .name("shopsync")
