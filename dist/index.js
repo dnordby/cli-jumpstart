@@ -6,7 +6,7 @@ import connect from "./actions/connect.js";
 // Base program
 program
     .name("shopsync")
-    .version("1.2.0")
+    .version("1.2.1")
     .showHelpAfterError();
 // Initialize command
 program
