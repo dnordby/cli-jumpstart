@@ -8,7 +8,7 @@ import connect from "./actions/connect";
 // Base program
 program
   .name("shopsync")
-  .version("1.1.3");
+  .version("1.2.0");
 
 // Initialize command
 program
