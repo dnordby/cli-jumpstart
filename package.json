@@ -1,6 +1,6 @@
 {
   "name": "@shopsync/cli",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "publishConfig": {
     "access": "public"
   },
@@ -25,7 +25,12 @@
   "bin": {
     "shopsync": "dist/index.js"
   },
-  "keywords": ["CLI", "Shopify", "Premium Themes", "Theme Customization"],
+  "keywords": [
+    "CLI",
+    "Shopify",
+    "Premium Themes",
+    "Theme Customization"
+  ],
   "author": "Daniel Nordby",
   "description": "A lightweight CLI to help sync your Shopify customizations with the latest theme updates from Shopify, or other premium themes.",
   "dependencies": {
