@@ -1,13 +1,6 @@
 import fs from "fs";
-import path from "path";
 import chalk from "chalk";
 import { execSync } from "child_process";
-import { fileURLToPath } from "url";
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-const packageJsonPath = path.resolve(__dirname, "../package.json");
-const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, "utf-8"));
-const version = packageJson.version;
 /**
  * Connect a Shopsync project to a Shopify store and theme
  *
@@ -15,7 +8,7 @@ const version = packageJson.version;
  * @param {string} themeId - The Shopify theme ID to connect to
  * @returns {void} - No return value
  */
-const connect = (store, themeId) => {
+const connect = (store, themeId, version) => {
     console.log(chalk.green(" Connecting to Shopify store... "));
     console.log(chalk.whiteBright(" "));
     console.log(chalk.whiteBright(`Store: ${store}`));

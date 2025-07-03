@@ -1,12 +1,21 @@
 #!/usr/bin/env node
+import fs from "fs";
+import path from "path";
 import { program } from "commander";
+import { fileURLToPath } from "url";
 import init from "./actions/init.js";
 import sync from "./actions/sync.js";
 import connect from "./actions/connect.js";
+// Determine version
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+const packageJsonPath = path.resolve(__dirname, "../package.json");
+const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, "utf-8"));
+const version = packageJson.version;
 // Base program
 program
     .name("shopsync")
-    .version("1.2.1")
+    .version(`${version}`)
     .showHelpAfterError();
 // Initialize command
 program
