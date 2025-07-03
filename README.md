@@ -14,23 +14,20 @@ It is primarily intended to be used with **existing** stores, but future enhance
 
 ## Usage
 
-### Usage help:
-
-`shopsync -h`
+### General:
+**Help:** `shopsync -h` \
+**Version:** `shopsync -V`
 
 ### Getting Started:
-In the directory you want to start a new project, or pull in an existing store:
 
-- `shopsync [directory]` 
-  - Replace `[directory]` with your project name.
-- `cd` into the newly created `[directory]`
-- `shopsync connect [store] [themeId]`
-  - `[store]` accepts a string: the store's `.myshopify.com` URL. Include the full URL.
-    - Example: `test.myshopify.com`
-    - Invalid: `test` (implied `.myshopify.com` does not work)
-  - `themeId` accepts a string: the theme ID as found in Shopify
+**Create Shopsync Project** \
+`shopsync init [directory]`
 
-Once complete, the CLI will connect to the store and theme specified, pull in the latest code from that instance, and output success messages. If there is an error, these will be displayed instead.
+**Connect to Shopify** \
+`shopsync connect [store] [themeId]`
+
+**Sync customizations to local theme** \
+`shopsync sync`
 
 ---
 
