@@ -8,24 +8,13 @@
     "type": "git",
     "url": "git+https://github.com/dnordby/cli-shopsync.git"
   },
-  "main": "dist/index.js",
+  "main": "index.js",
   "license": "MIT",
   "type": "module",
   "files": [
     "dist"
   ],
-  "scripts": {
-    "build": "tsc",
-    "start": "node dist/index.js",
-    "deploy": "npm publish",
-    "bump": "npm version patch",
-    "minor": "npm version minor",
-    "major": "npm version major"
-  },
-  "bin": {
-    "shopsync": "dist/index.js"
-  },
-  "keywords": [],
+  "keywords": ["CLI", "Shopify", "Premium Themes", "Theme Customization"],
   "author": "Daniel Nordby",
   "description": "A lightweight CLI to help sync your Shopify customizations with the latest theme updates from Shopify, or other premium themes.",
   "dependencies": {

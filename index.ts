@@ -4,14 +4,17 @@ import { program } from "commander";
 import init from "./actions/init";
 import sync from "./actions/sync";
 import connect from "./actions/connect";
+import help from "./actions/help";
 
 // Base program
 program
   .name("shopsync")
-  .version("1.2.0");
+  .version("1.2.0")
+  .showHelpAfterError();
 
 // Initialize command
 program
+  .command("init")
   .description("Initialize shopsync directory")
   .argument("[directory]", "The directory name to initialize")
   .action(init);

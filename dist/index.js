@@ -1,14 +1,16 @@
 #!/usr/bin/env node
 import { program } from "commander";
-import init from "./actions/init";
-import sync from "./actions/sync";
-import connect from "./actions/connect";
+import init from "./actions/init.js";
+import sync from "./actions/sync.js";
+import connect from "./actions/connect.js";
 // Base program
 program
     .name("shopsync")
-    .version("1.1.3");
+    .version("1.2.0")
+    .showHelpAfterError();
 // Initialize command
 program
+    .command("init")
     .description("Initialize shopsync directory")
     .argument("[directory]", "The directory name to initialize")
     .action(init);

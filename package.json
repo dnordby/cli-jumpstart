@@ -15,7 +15,7 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsc",
+    "build": "tsc && node --import 'data:text/javascript,import { register } from \"node:module\"; import { pathToFileURL } from \"node:url\"; register(\"ts-node/esm\", pathToFileURL(\"./\"));' helpers/build.ts",
     "start": "node dist/index.js",
     "deploy": "npm publish",
     "bump": "npm version patch",
@@ -25,7 +25,7 @@
   "bin": {
     "shopsync": "dist/index.js"
   },
-  "keywords": [],
+  "keywords": ["CLI", "Shopify", "Premium Themes", "Theme Customization"],
   "author": "Daniel Nordby",
   "description": "A lightweight CLI to help sync your Shopify customizations with the latest theme updates from Shopify, or other premium themes.",
   "dependencies": {
