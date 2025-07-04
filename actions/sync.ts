@@ -2,6 +2,7 @@ import fs from "fs";
 import path from "path";
 import chalk from "chalk";
 import { execSync } from "child_process";
+import { error } from "console";
 
 /**
  * Sync custom changes to local Shopify theme
@@ -21,7 +22,20 @@ const sync = (): void => {
     return;
   }
 
-  execSync(`npm run build`);
+  try {
+    execSync(`npm run sync`);
+  } catch (error) {
+    chalk.bgRedBright(
+      "An error occurred while building the theme. Please review the error below:"
+    );
+    chalk.white(" ");
+    chalk.white("-------");
+    chalk.white(" ");
+    chalk.white(error);
+    chalk.white(" ");
+    chalk.white("-------");
+    return;
+  }
 };
 
 export default sync;
